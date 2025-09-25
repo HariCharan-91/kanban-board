@@ -1,24 +1,11 @@
-import KanbanBoard from './components/KanbanBoard';
-import Navbar from './components/Navbar';
-import './App.css';
-import { useState } from 'react';
+import React from 'react';
+import VisualGuide from './pages/VisualGuide';
+import './index.css';
 
 function App() {
-
-  const [grouping, setGrouping] = useState("Status");
-  const [ordering, setOrdering] = useState("Priority");
-
   return (
-    <div>
-     <Navbar
-        onGroupingChange={setGrouping}
-        onOrderingChange={setOrdering}
-      />
-      <KanbanBoard grouping={grouping} ordering={ordering} /> 
-    </div>
+    <VisualGuide />
   );
 }
 
 export default App;
-
-
